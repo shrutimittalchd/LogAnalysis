@@ -13,9 +13,7 @@
 
 * After this connect to the database and run the _db.py_ file. 
   
-  Enter the command:
-  
-`python dbF.py`
+  Enter the command:  `python dbF.py`
 
 * If program has run successfully, three text files will be created which shows the output in plain text.
 
