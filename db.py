@@ -12,7 +12,7 @@ errors = open('errors.txt', 'w+')
 
 
 # gives top 3 most viewed  articles of all time
-def problem1():
+def que1():
     db = psycopg2.connect(database=DB_NAME)
     cur = db.cursor()
     cur.execute("""select articles.title,
@@ -30,7 +30,7 @@ def problem1():
 
 
 # gives the authors name with most views
-def problem2():
+def que2():
     db = psycopg2.connect(database=DBNAME)
     cur = db.cursor()
     cur.execute("""select authors.name, count(*) as
@@ -46,7 +46,7 @@ def problem2():
 
 
 # gives the %errors with date
-def problem3():
+def que3():
     db = psycopg2.connect(database=DBNAME)
     cur = db.cursor()
     cur.execute("""create view totalrequests as
@@ -72,7 +72,6 @@ def problem3():
         errors.write(str(item[1]) + ' - ' + '%0.2f' % item[0] + '%errors\n')
     db.close()
 
-
-problem1()
-problem2()
-problem3()
+que1()
+que2()
+que3()
